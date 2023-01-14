@@ -1,0 +1,17 @@
+local Games = {
+  ["DaHood"] = 2788229376
+}
+
+for i=1, #Games do
+  if game.placeId == Games[i] then
+    loadstring(game:HttpGet(""))()
+  end
+end
+
+for GameName, GameId in pairs(Games) do
+  if game.placeId == GameId then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/rizzgod5961/RizzHub/main/"..GameName))()
+  elseif game.placeId ~= GameId then
+    print("Unsupported game!")
+  end
+end
